@@ -1,3 +1,5 @@
+import {$, h, add} from "./dom.js";
+
 "use strict";
 /* ============ 1. DADOS — o ÚNICO lugar que eu edito ============
    Para adicionar projeto/certificado/experiência: copiar uma linha e mudar o texto. */
