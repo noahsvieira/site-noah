@@ -47,11 +47,34 @@ const T = {
     s4: "04 / Path", h2d: "Experience and education", log: "~/career/experience.log", edu: "cat education.txt", cert: "ls ./certifications --featured",
     h2e: "Got a hard problem?", p5: "Great. Tell me what needs to work.", go: "start a conversation ↗", top: "Back to top ↑",
     help: "commands: ls · cd <section> · cat about.txt · send <message> · theme · clear", nf: "command not found: ", usage: "usage: send <message>", enc: "encrypted in your browser (RSA-OAEP) — only the owner’s private key reads it:"
+  },
+    fr: {
+    n1: "À propos", n2: "Travail", n3: "Contact", ready: "système prêt", acc: "ACCÈS AUTORISÉ", hint: "// Tapez « hi » pour démarrer", exec: "[exécuter]",
+    tag: "Backend · Sécurité · Données + IA", h1: "Backend, droit au but.", lead: "Je développe, teste et automatise avec Python, Java, SQL, JavaScript, des API et Linux. Formé en cybersécurité, data science et IA — actuellement orienté Backend.",
+    c1: "Voir ce que je fais ↓", c2: "Me contacter", foco: "Focus", base: "Base", abo: "Approche", v1: "Backend", v2: "Sécurité", v3: "Pratique", ok: "profil chargé avec succès", ph: "essayez : ls, cd projects, cat about.txt ou help",
+    s1: "01 / Ma méthode", h2a: "Je développe, teste et automatise.", p2: "Expérience pratique de Python, Java, SQL, JavaScript, des API et de Linux, appliquée au développement de systèmes, à l’automatisation et à l’analyse d’environnements. J’aime comprendre les systèmes de bout en bout, trouver les problèmes et construire des solutions.",
+    st: [["Cartographier", "Je comprends le flux complet, les dépendances et l’endroit où le problème commence vraiment."], ["Enquêter", "Je teste des hypothèses avec du code, des logs, des données et une vision de sécurité offensive et défensive."], ["Construire", "Je livre du code propre, court, documenté et couvert par des tests."], ["Protéger", "Authentification, validation et chiffrement dès le premier commit."]],
+    s2: "02 / Travail", h2b: "Projets sélectionnés", code: "voir le code ↗", s3: "03 / Arsenal", h2c: "Les outils sont des moyens. Résoudre est le travail.",
+    s4: "04 / Parcours", h2d: "Expérience et formation", log: "~/carriere/experience.log", edu: "cat formation.txt", cert: "ls ./certifications --en-avant",
+    h2e: "Un problème difficile ?", p5: "Parfait. Dites-moi ce qui doit fonctionner.", go: "démarrer la conversation ↗", top: "Retour en haut ↑",
+    help: "commandes : ls · cd <section> · cat about.txt · send <message> · theme · clear", nf: "commande introuvable : ", usage: "usage : send <message>", enc: "chiffré dans votre navigateur (RSA-OAEP) — seule la clé privée du propriétaire le lit :"
+  },
+  no: {
+    n1: "Om meg", n2: "Arbeid", n3: "Kontakt", ready: "system klart", acc: "TILGANG GITT", hint: "// Skriv «hi» for å starte", exec: "[kjør]",
+    tag: "Backend · Sikkerhet · Data + KI", h1: "Backend, rett på sak.", lead: "Jeg utvikler, tester og automatiserer med Python, Java, SQL, JavaScript, API-er og Linux. Utdannet innen cybersikkerhet, datavitenskap og KI – med fokus på backend.",
+    c1: "Se hva jeg gjør ↓", c2: "Snakk med meg", foco: "Fokus", base: "Grunnlag", abo: "Tilnærming", v1: "Backend", v2: "Sikkerhet", v3: "Praktisk", ok: "profil lastet inn", ph: "prøv: ls, cd projects, cat about.txt eller help",
+    s1: "01 / Slik jobber jeg", h2a: "Jeg utvikler, tester og automatiserer.", p2: "Praktisk erfaring med Python, Java, SQL, JavaScript, API-er og Linux, brukt i systemutvikling, automatisering og analyse av miljøer. Jeg liker å forstå systemer fra ende til annen, finne problemer og bygge løsninger.",
+    st: [["Kartlegge", "Jeg forstår hele flyten, avhengighetene og hvor problemet egentlig begynner."], ["Undersøke", "Jeg tester hypoteser med kode, logger, data og et offensivt og defensivt sikkerhetsblikk."], ["Bygge", "Jeg leverer ren, kort og dokumentert kode som er dekket av tester."], ["Beskytte", "Autentisering, validering og kryptering fra første commit."]],
+    s2: "02 / Arbeid", h2b: "Utvalgte prosjekter", code: "se koden ↗", s3: "03 / Arsenal", h2c: "Verktøy er midler. Å løse er jobben.",
+    s4: "04 / Veien hit", h2d: "Erfaring og utdanning", log: "~/karriere/erfaring.log", edu: "cat utdanning.txt", cert: "ls ./sertifiseringer --utvalgt",
+    h2e: "Har du et vanskelig problem?", p5: "Flott. Fortell meg hva som må fungere.", go: "start en samtale ↗", top: "Tilbake til toppen ↑",
+    help: "kommandoer: ls · cd <seksjon> · cat about.txt · send <melding> · theme · clear", nf: "kommando ikke funnet: ", usage: "bruk: send <melding>", enc: "kryptert i nettleseren din (RSA-OAEP) – bare eierens private nøkkel kan lese den:"
   }
+
 };
 let lang = "pt";
 const t = k => (T[lang] && T[lang][k]) ?? T.en[k];
-const loc = o => o[lang] ?? o.en ?? o.pt;
+const loc = o => (typeof o === "string" ? o : (o[lang] ?? o.en ?? o.pt));
 
 /* ============ 3. Helpers seguros: textContent nunca interpreta HTML (anti-XSS) ============ */
 const $ = id => document.getElementById(id);
