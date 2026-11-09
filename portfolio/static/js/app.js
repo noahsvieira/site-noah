@@ -1,20 +1,37 @@
-
-/* ============ 1. DADOS — o ÚNICO lugar para eu editar ============
-   Para adicionar projeto/certificado/experiência: copiar uma linha e mude o texto. */
 "use strict";
-
+/* ============ 1. DADOS — o ÚNICO lugar que eu edito ============
+   Para adicionar projeto/certificado/experiência: copiar uma linha e mudar o texto. */
 const DATA = {
   name: "Noah S. Vieira", github: "#", linkedin: "#", mail: "mailto:voce@exemplo.com",
   stack: ["REST API", "APPSEC", "DEV BACK-END", "CIBERSEGURANÇA", "AUTOMATION", "PYTHON", "JAVA", "FASTAPI", "SQL", "LINUX"],
   arsenal: [["Backend", "Python · Java · FastAPI · APIs RESTful"], ["Dados + IA", "SQL · Ciência de Dados · Machine Learning"], ["Segurança", "Pentest · SOC · Active Directory · OWASP"], ["Sistemas", "Linux · Git · Automação · Redes"]],
   projects: [
     {
-      t: "Backend / Integrações", n: { pt: "API de Recarga e Pagamentos", en: "Top-up & Payments API" }, tags: ["Python", "FastAPI", "REST", "Integrações"], url: "#",
-      d: { pt: "API REST em Python e FastAPI a partir de uma demanda real, reproduzindo um cenário de integração para recarga de celular e pagamento de contas.", en: "REST API in Python and FastAPI built from a real request, reproducing an integration scenario for mobile top-up and bill payments." }
+      t: "Backend / Integrações",
+      n: { pt: "API de Recarga e Pagamentos", en: "Top-up & Payments API" },
+      d: {
+        pt: "API REST em Python e FastAPI a partir de uma demanda real, reproduzindo um cenário de integração para recarga de celular e pagamento de contas.",
+        en: "REST API in Python and FastAPI built from a real request, reproducing an integration scenario for mobile top-up and bill payments."
+      },
+      tags: ["Python", "FastAPI", "REST", "Integrações"],
+      url: "#"
     },
     {
-      t: "Backend / Cybersecurity", n: { pt: "Secure Mail Gateway", en: "Secure Mail Gateway" }, tags: ["Python", "FastAPI", "AppSec", "E-mail"], url: "#",
-      d: { pt: "Gateway de e-mail seguro em Python e FastAPI para mitigar vulnerabilidades em comunicações corporativas.", en: "Secure e-mail gateway in Python and FastAPI to mitigate vulnerabilities in corporate communications." }
+      t: "Backend / Cybersecurity",
+      n: { pt: "Secure Mail Gateway", en: "Secure Mail Gateway" },
+      d: {
+        pt: "Gateway de e-mail seguro em Python e FastAPI para mitigar vulnerabilidades em comunicações corporativas.",
+        en: "Secure e-mail gateway in Python and FastAPI to mitigate vulnerabilities in corporate communications."
+      },
+      tags: ["Python", "FastAPI", "AppSec", "E-mail"],
+      url: "#"
+    },
+    {
+      t: "Backend / Dados",
+      n: "Meu novo projeto",
+      d: "Descrição em português.",
+      tags: ["Python", "SQL"],
+      url: "#"
     }
   ],
   career: [["2024 — Atual", "Desenvolvedor Backend", { pt: "Soluções server-side, APIs RESTful e automação de processos com Python e Java.", en: "Server-side solutions, RESTful APIs and process automation with Python and Java." }],
@@ -48,7 +65,7 @@ const T = {
     h2e: "Got a hard problem?", p5: "Great. Tell me what needs to work.", go: "start a conversation ↗", top: "Back to top ↑",
     help: "commands: ls · cd <section> · cat about.txt · send <message> · theme · clear", nf: "command not found: ", usage: "usage: send <message>", enc: "encrypted in your browser (RSA-OAEP) — only the owner’s private key reads it:"
   },
-    fr: {
+  fr: {
     n1: "À propos", n2: "Travail", n3: "Contact", ready: "système prêt", acc: "ACCÈS AUTORISÉ", hint: "// Tapez « hi » pour démarrer", exec: "[exécuter]",
     tag: "Backend · Sécurité · Données + IA", h1: "Backend, droit au but.", lead: "Je développe, teste et automatise avec Python, Java, SQL, JavaScript, des API et Linux. Formé en cybersécurité, data science et IA — actuellement orienté Backend.",
     c1: "Voir ce que je fais ↓", c2: "Me contacter", foco: "Focus", base: "Base", abo: "Approche", v1: "Backend", v2: "Sécurité", v3: "Pratique", ok: "profil chargé avec succès", ph: "essayez : ls, cd projects, cat about.txt ou help",
@@ -70,7 +87,6 @@ const T = {
     h2e: "Har du et vanskelig problem?", p5: "Flott. Fortell meg hva som må fungere.", go: "start en samtale ↗", top: "Tilbake til toppen ↑",
     help: "kommandoer: ls · cd <seksjon> · cat about.txt · send <melding> · theme · clear", nf: "kommando ikke funnet: ", usage: "bruk: send <melding>", enc: "kryptert i nettleseren din (RSA-OAEP) – bare eierens private nøkkel kan lese den:"
   }
-
 };
 let lang = "pt";
 const t = k => (T[lang] && T[lang][k]) ?? T.en[k];
